@@ -1,0 +1,171 @@
+/* Section text */
+.section__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-inline: 20px;
+    /*height: 320px;*/
+    max-width: 1060px;
+}
+
+.section__heading {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    /*font-size: 3.5rem;*/
+    font-size: clamp(2rem, 1.5rem + 1vw, 3.5rem);
+
+    text-transform: capitalize;
+    line-height: var(--line-height-large);
+    color: var(--text-white);
+
+    margin-bottom: clamp(20px, 1.8vw, var(--primary-margin));
+}
+
+.section__description {
+    max-width: 585px;
+    margin-bottom: var(--primary-margin);
+    text-align: center;
+}
+
+.description {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: clamp(1rem, 0.75rem + 0.5vw, 1.25rem);
+
+    /*font-size: 1.25rem;*/
+
+    line-height: var(--line-height-small);
+    color: var(--text-light);
+}
+
+@media (max-width: 1000px) {
+
+}
+
+@media (max-width: 600px) {
+    .section__heading {
+        line-height: var(--line-height-medium);
+        text-align: center;
+    }
+}
+/*}*/
+/* /Section text */
+
+
+/* Button */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 60px;
+    width: 190px;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: 1.25rem;
+
+    text-transform: uppercase;
+    border-radius: var(--border-radius);
+    background: var(--gradient-main);
+    line-height: var(--line-height-small);
+    color: var(--text-white);
+    box-shadow: var(--shadow);
+    transition: transform var(--transition-speed) var(--transition-ease);
+}
+
+.button:hover{
+    transform: scale(1.05);
+}
+/* /Button */
+
+/* Primary link */
+.link {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.25rem;
+    color: var(--text-light);
+
+    width: fit-content;
+    padding-block: 10px;
+    z-index: 1;
+
+}
+
+.link-text {
+    display: inline-block;
+    position: relative;
+
+    z-index: 2;
+}
+
+.link-text::before {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--gradient-main);
+
+    z-index: -1; /* Під основним вмістом */
+    transform-origin: bottom center;
+    transition: height var(--transition-speed) var(--transition-ease);
+}
+
+.link::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: url("../assets/icons/arrow-right.svg") no-repeat
+    center/contain;
+    margin-left: 10px;
+}
+
+.link:hover  .link-text::before{
+    height: 140%;
+    border-radius: var(--border-radius);
+}
+/* /Primary link */
+
+/* Link special hover */
+.link-hover::before {
+    content: "";
+    position: absolute;
+    top: calc(100% - 10px + 2px);
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-main);
+    transition: width var(--transition-speed) var(--transition-ease);
+}
+
+.link-hover:hover::before {
+    width: 100%;
+}
+/* Link special hover */
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}

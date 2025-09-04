@@ -1,0 +1,147 @@
+/* About us container */
+.about-us {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+
+.about-us::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 15%;
+    left: 35%;
+    height: 800px;
+    width: 650px;
+    object-fit: cover;
+    z-index: -1;
+
+    background-image: url("../assets/background/bubble-3-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/bubble-3-1x.png") 1x,
+        url("../assets/background/bubble-3-2x.png") 2x,
+        url("../assets/background/bubble-3-3x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/bubble-3-1x.png") 1x,
+        url("../assets/background/bubble-3-2x.png") 2x,
+        url("../assets/background/bubble-3.png") 3x
+    );
+}
+
+.about-us::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: 10%;
+    height: 1500px;
+    width: 1500px;
+
+    z-index: -1;
+
+    background-image: url("../assets/background/bubble-4-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/bubble-4-1x.png") 1x,
+        url("../assets/background/bubble-4-2x.png") 2x,
+        url("../assets/background/bubble-4-3x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/bubble-4-1x.png") 1x,
+        url("../assets/background/bubble-4-2x.png") 2x,
+        url("../assets/background/bubble-4.png") 3x
+    );
+}
+/* /About us container */
+
+
+/* About us software part */
+.software {
+    margin-block: 180px 300px;
+}
+
+.software__title {
+    max-width: 550px;
+
+    text-align: center;
+    /*font-size: 4.625rem;*/
+    font-size: clamp(2.5rem, 1.5rem + 3vw, 4.625rem);
+}
+
+
+/* /About us software part */
+
+
+/* About us team part */
+.team {
+    width: 100%;
+}
+
+.team__stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+    grid-auto-rows: auto;
+
+    width: 100%;
+    margin-top: 30px;
+
+    padding-inline: 20px;
+    gap: 2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.team__stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-inline: 15px;
+    font-size: 2.5rem;
+    min-height: 180px;
+    min-width: 0;
+    overflow: hidden;
+}
+
+.team__stat-gradient {
+    background: var(--gradient-main);
+    border-radius: var(--border-radius);
+}
+
+.team__stat-number {
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    font-size: clamp(1.75rem, 1.25rem + 1vw, 2.5rem);
+
+    line-height: var(--line-height-large);
+    color: var(--text-wite);
+}
+
+.team__stat-label {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1.125rem;
+
+    text-align: center;
+    line-height: var(--line-height-small);
+    color: var(--text-light);
+}
+/* /About us team part */
+
+@media (max-width: 600px) {
+    .team__stat-number {
+        line-height: var(--line-height-medium);
+        text-align: center;
+    }
+}

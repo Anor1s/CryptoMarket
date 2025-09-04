@@ -1,0 +1,115 @@
+.contact-us {
+    position: relative;
+    padding-inline: 20px;
+}
+
+.contact-us::before,
+.contact-us::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    height: 250px;
+    width: 250px;
+
+    object-fit: cover;
+    z-index: -2;
+
+    background-image: url("../assets/background/yellow-bubble-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/yellow-bubble-1x.png") 1x,
+        url("../assets/background/yellow-bubble-2x.png") 2x,
+        url("../assets/background/yellow-bubble-3x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/yellow-bubble-1x.png") 1x,
+        url("../assets/background/yellow-bubble-2x.png") 2x,
+        url("../assets/background/yellow-bubble-3x.png") 3x
+    );
+}
+
+.contact-us::before {
+    top: 6%;
+    left: 47%;
+}
+
+.contact-us::after {
+    top: 46%;
+    left: 72%;
+}
+
+.contact-us__description {
+    font-size: 1.125rem;
+    min-height: 120px;
+    max-width: 625px;
+
+    position: relative;
+}
+
+.contact-us__description::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    top: -55%;
+    left: -72%;
+
+    height: 400px;
+    width: 600px;
+
+    object-fit: cover;
+    z-index: -1;
+
+    background-image: url("../assets/background/blue-bubble-2-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/blue-bubble-2-1x.png") 1x,
+        url("../assets/background/blue-bubble-2-2x.png") 2x,
+        url("../assets/background/blue-bubble-2-3x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/blue-bubble-2-1x.png") 1x,
+        url("../assets/background/blue-bubble-2-2x.png") 2x,
+        url("../assets/background/blue-bubble-2-3x.png") 3x
+    );
+}
+
+.contact-us__description::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    top: -150%;
+    left: 50%;
+    height: 650px;
+    width: 580px;
+
+    /*height: 1200px;*/
+    /*width: 1200px;*/
+
+    object-fit: cover;
+    z-index: -1;
+
+    background-image: url("../assets/background/bubble-5-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/bubble-5-1x.png") 1x,
+        url("../assets/background/bubble-5-2x.png") 2x,
+        url("../assets/background/bubble-5-3x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/bubble-5-1x.png") 1x,
+        url("../assets/background/bubble-5-2x.png") 2x,
+        url("../assets/background/bubble-5-3x.png") 3x
+    );
+}

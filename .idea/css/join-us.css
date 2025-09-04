@@ -1,0 +1,104 @@
+.join-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+
+    gap: 40px;
+    position: relative;
+    padding-inline: 20px;
+}
+
+
+.join-us__title {
+    margin-bottom: 160px;
+    position: relative;
+}
+
+.join-us__title::before {
+    content: "";
+    position: absolute;
+
+    top: -80%;
+    left: -70%;
+    height: 500px;
+    width: 700px;
+
+    object-fit: cover;
+    z-index: -1;
+
+    background-image: url("../assets/background/blue-bubble-1-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/blue-bubble-1-1x.png") 1x,
+        url("../assets/background/blue-bubble-1-1x.png") 2x,
+        url("../assets/background/blue-bubble-1-1x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/blue-bubble-1-1x.png") 1x,
+        url("../assets/background/blue-bubble-1-1x.png") 2x,
+        url("../assets/background/blue-bubble-1-1x.png") 3x
+    );
+}
+
+.join-us__title::after {
+    content: "";
+    position: absolute;
+
+    top: -80%;
+    left: 30%;
+    height: 400px;
+    width: 400px;
+
+    object-fit: cover;
+    z-index: 1;
+
+    background-image: url("../assets/background/yellow-bubble-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/yellow-bubble-1x.png") 1x,
+        url("../assets/background/yellow-bubble-2x.png") 2x,
+        url("../assets/background/yellow-bubble-3x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/yellow-bubble-1x.png") 1x,
+        url("../assets/background/yellow-bubble-2x.png") 2x,
+        url("../assets/background/yellow-bubble-3x.pngg") 3x
+    );
+}
+
+
+.join-us__container {
+    width: 50%;
+}
+
+.join-us__info-body {
+
+    width: 100%;
+}
+
+.join-us__info {
+    text-align: start;
+}
+
+
+@media (max-width: 600px) {
+    .join-us {
+        flex-direction: column;
+    }
+
+    .join-us__title {
+        margin-bottom: 0;
+    }
+
+    .join-us__container {
+        width: 100%;
+    }
+}

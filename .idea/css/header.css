@@ -1,0 +1,115 @@
+/* /Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-inline: clamp(40px, 4.2vw,80px);
+    height: 90px;
+    max-width: var(--max-width-big);
+    margin: 0 auto;
+}
+
+.header * {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: var(--line-height-small);
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    position: relative;
+}
+/* Header */
+
+/* Nav bar */
+.header__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: var(--line-height-small);
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    position: relative;
+
+    gap: 16px;
+}
+
+.header__menu-link {
+    padding: 10px 2px;
+
+    background: transparent;
+    transition: color var(--transition-speed) var(--transition-ease);
+}
+
+/* Nav bar Special Link */
+.header__menu-link--other {
+    padding: 5px 8px;
+    border-radius: 50%;
+    position: relative;
+    background: transparent;
+}
+
+.header__menu-link--other::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    border-radius: 50%;
+    inset: 0;
+    opacity: 0;
+    background: var(--gradient-main);
+    transition: opacity var(--transition-speed) var(--transition-ease);
+    z-index: -1;
+}
+
+.header__menu-link--other:hover::before {
+    opacity: 1;
+}
+/* /Nav bar Special Link */
+/* /Nav bar */
+
+
+/* Authorization button */
+.header__auth-button {
+    height: 40px;
+    padding-inline: 5px;
+    position: relative;
+    background: transparent;
+}
+
+.header__auth-button::before {
+    content: "";
+    position: absolute;
+    background: var(--gradient-main);
+    border-radius: 50%;
+    top: 25%;
+    left: -20%;
+    width: 16px;
+    aspect-ratio: 1;
+    z-index: 1;
+}
+
+.header__auth-button::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    background: var(--gradient-main);
+    transition: opacity var(--transition-speed) var(--transition-ease);
+    border-radius: var(--border-radius);
+    z-index: -1;
+}
+
+.header__auth-button:hover::after {
+    opacity: 1;
+}
+/* /Authoritaion button */
+
+@media (max-width: 1000px) {
+    .header__menu-link:not(.header__menu-link--other) {
+        display: none;
+    }
+}

@@ -1,0 +1,161 @@
+.making {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    padding-inline: 20px;
+    gap: var(--section-spacing-sm);
+}
+
+.making::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    top: -35%;
+    left: -120%;
+    z-index: -1;
+
+    height: 2800px;
+    width: 2800px;
+
+    object-fit: cover;
+
+    background-image: url("../assets/background/background-bubble-1-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/background-bubble-1-1x.png") 1x,
+        url("../assets/background/background-bubble-1-2x.png") 2x,
+        url("../assets/background/background-bubble-1-3x.png") 3x
+    );
+    background-image: image-set(
+        url("../assets/background/background-bubble-1-1x.png") 1x,
+        url("../assets/background/background-bubble-1-2x.png") 2x,
+        url("../assets/background/background-bubble-1-3x.png") 3x
+    );
+}
+
+/* Container with cards */
+.making__body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+    width: 100%;
+    gap: 100px;
+}
+
+.making__card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 380px;
+    width: 100%;
+}
+
+.making__card--bigger {
+    height: 540px;
+    margin-top: 80px;
+    padding-bottom: 120px;
+}
+
+
+.making__card:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+
+.making__card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+
+    max-width: 400px;
+    height: 100%;
+
+    gap: 20px;
+}
+
+.making__card-title {
+    font-family: "Inter", sans-serif;
+    font-size: 2.25rem;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: var(--line-height-medium);
+}
+
+.making__card-subtitle {
+    font-family: "Inter", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: var(--line-height-small);
+}
+
+.making__card-description {
+    margin-bottom: 10px;
+}
+
+.making__card-img-wrapper {
+
+    overflow: hidden;
+    position: relative;
+}
+
+.making__card-img-wrapper::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../assets/background/bubble-2-1x.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    background-image: -webkit-image-set(
+        url("../assets/background/bubble-2-1x.png") 1x,
+        url("../assets/background/bubble-2-2x.png") 2x,
+        url('../assets/background/bubble-2-3x.png') 3x
+    );
+    background-image: image-set(
+        url("../assets/background/bubble-2-1x.png") 1x,
+        url("../assets/background/bubble-2-2x.png") 2x,
+        url("../assets/background/bubble-2-3x.png") 3x
+    );
+    z-index: -1;
+}
+
+.making__card-img--bigger {
+    height: 760px;
+    width: 760px;
+    margin-top: -80px;
+    margin-left: -100px;
+}
+
+.making__card--margin-right {
+    margin-right: 60px;
+}
+/* /Container with cards */
+
+@media (max-width: 1000px) {
+    .making__card,
+    .making__card.making__card--bigger {
+        height: auto;
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .making__card.making__card--bigger {
+        margin-top: 0;
+    }
+
+}

@@ -1,0 +1,141 @@
+:root {
+    --text-white: #ffffff;
+    --text-light: #e5e5e5;
+    --text-gray: #bcbcbc;
+    --text-darker-gray: #999999;
+
+    --gray: #333333;
+
+    --line-height-small: 30px;
+    --line-height-medium: 45px;
+    --line-height-large: 80px;
+
+    --primary-margin: 35px;
+    --secondary-margin: 25px;
+
+    --section-spacing: 200px;
+    --section-spacing-sm: 100px;
+
+    --max-width-big: 1920px;
+    --max-width-small: 1060px;
+
+    --first-screen-width: 1000px;
+    --second-screen-width: 600px;
+
+    /*--body-background-color: #1E1E1E;*/
+    --body-background-color: #141619;
+
+    --border-radius: 2px;
+    --border-radius-big: 4px;
+    --shadow: 4px 4px 15px 0 rgba(0, 0, 0, 0.75);
+
+    --gradient-main: linear-gradient(
+        to right bottom,
+        rgb(102 93 205 / 1) 0%,
+        rgb(95 164 230 / 1) 45%,
+        rgb(210 171 103 / 1) 100%
+    );
+    --gradient-2: linear-gradient(
+        to bottom,
+        rgb(20 22 25 / 0) 0%,
+        rgb(20 22 25 / 0.88) 53%,
+        rgb(20 22 25 / 1) 100%
+    );
+    --gradient-3: linear-gradient(
+        to bottom,
+        rgb(65 85 114 / 0.15) 0%,
+        rgb(27 27 30 / 0.1) 100%
+    );
+
+    --transition-speed: 0.35s;
+    --transition-ease: ease-out;
+}
+
+/* CSS Reset */
+body {
+    color: white;
+    margin: 0;
+    background-color: var(--body-background-color);
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    border-radius: var(--border-radius);
+    transition: opacity var(--transition-speed) var(--transition-ease);
+}
+
+/*a:hover,*/
+/*!*a:hover::after,*!*/
+/*!*a:hover::before,*!*/
+/*button:hover {*/
+/*    transition: all var(--transition-speed) var(--transition-ease);*/
+/*}*/
+
+@media (hover: hover) {
+
+}
+
+input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+}
+
+*:focus-visible {
+    outline: 2px solid var(--focus-color, #005fcc);
+    border-radius: 2px;
+    outline-offset: 5px;
+}
+
+
+h1, h2, h3, h4, h5, h6, p, a {
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    width: 99vw;
+    overflow: hidden;
+}
+
+section {
+    margin-bottom: var(--section-spacing);
+    margin-inline: auto;
+    max-width: var(--max-width-small);
+    /*margin-block: 150px;*/
+}
+
+
+/* /CSS Reset */
+
+
+
+h1 {
+    /*background:*/
+    /*    linear-gradient(white, white) padding-box,*/
+    /*    var(--gradient-1) border-box;*/
+    /*border-bottom: 2px solid transparent;*/
+    /*border-radius: 8px;*/
+}
+
+
+
+
